@@ -11,7 +11,7 @@ PHPLOC-xmlToHtmlReport converts xml phploc reports into HTML reports.
 
 ## Screenshots
 
-![ScreenShot](https://raw2.github.com/linslin/phploc-xmlToHtmlReport/development/art/screen1.png)
+![ScreenShot](https://raw2.github.com/linslin/phploc-xmlToHtmlReport/master/art/screen1.png)
 
 ## Tested with
 
