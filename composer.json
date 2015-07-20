@@ -1,5 +1,5 @@
 {
-  "name": "linslin/phploc-xmlToHtmlReport",
+  "name": "linslin/phploc-xmltohtmlreport",
   "description": "Create HTML Report for phploc.",
   "type": "phploc-stand-alone-extension",
   "keywords": ["php","quality","HTML", "Report"],
