@@ -54,8 +54,9 @@ PHPLOC-xmlToHtmlReport converts xml phploc reports into HTML reports.
           
              require_once 'lib/phploc-xmlToHtmlReport/app/phplocXmlToHtml.php';
              $phplocXmlToHtml = new phplocXmlToHtml();
-             $phplocXmlToHtml->baseDir = getcwd().'/lib/phploc-xmlToHtmlReport/app';
-             $phplocXmlToHtml->xmlReportFilePath = getcwd().'/reports/phpLoc.xml';
+             $phplocXmlToHtml->baseDir = getcwd().'/lib/phploc-xmlToHtmlReport/app'; // absolute/relative path of lib.
+             $phplocXmlToHtml->xmlReportFilePath = getcwd().'/reports/phpLoc.xml'; //input dir of phploc xml report
+             $phplocXmlToHtml->reportToDir = getcwd().'/reports/html/'; //output of dir of HTML Report
              $phplocXmlToHtml->generate();
           }
       }
