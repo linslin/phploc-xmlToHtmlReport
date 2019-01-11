@@ -19,6 +19,9 @@
   "support": {
     "issues": "https://github.com/linslin/phploc-xmlToHtmlReport/issues"
   },
+  "bin": [
+    "phpLocXmlToHtml"
+  ],
   "autoload": {
     "classmap": [
       "app/"
