@@ -20,7 +20,6 @@ $cmd->option('outputPath')
     ->describedAs('The export directory path where the report will be generated in.');
 
 $phplocXmlToHtml = new phpLocXmlToHtml();
-$phplocXmlToHtml->baseDir = getcwd().'/app'; // absolute/relative path of lib.
 $phplocXmlToHtml->xmlReportFilePath = $cmd['importFilePath']; //input dir of phploc xml report
 $phplocXmlToHtml->reportToDir = $cmd['outputPath']; //output of dir of HTML Report
 $phplocXmlToHtml->generate();
