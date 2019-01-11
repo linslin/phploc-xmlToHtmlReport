@@ -24,7 +24,7 @@ php composer require --prefer-dist linslin/phploc-xmltohtmlreport "*"
 
 ## Run via binary
 ```
-vendor/bin/phpLocXmlToHtml --importFilePath ./test/phploc.xml --outputPath ./test"
+vendor/bin/phpLocXmlToHtml --importFilePath ./test/phploc.xml --outputPath ./test
 ```
 
 ## Run with Phing
