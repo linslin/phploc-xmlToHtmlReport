@@ -14,7 +14,7 @@ PHPLOC-xmlToHtmlReport converts xml phploc reports into HTML reports.
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 ```bash
-php composer require --prefer-dist linslin/phploc-xmltohtmlreport "*"
+composer require --prefer-dist linslin/phploc-xmltohtmlreport "*"
 ```
 
 ## Screenshots
