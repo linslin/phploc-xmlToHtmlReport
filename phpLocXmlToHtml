@@ -1,3 +1,26 @@
 #!/usr/bin/env php
 <?php
 
+foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+    if (file_exists($file)) {
+        require $file;
+        break;
+    }
+}
+
+$cmd = new Commando\Command();
+
+$cmd->option('i')
+    ->aka('importFilePath')
+    ->require()
+    ->describedAs('The import file path of phploc.xml.');
+
+$cmd->option('outputPath')
+    ->require()
+    ->describedAs('The export directory path where the report will be generated in.');
+
+$phplocXmlToHtml = new phpLocXmlToHtml();
+$phplocXmlToHtml->baseDir = getcwd().'/app'; // absolute/relative path of lib.
+$phplocXmlToHtml->xmlReportFilePath = $cmd['importFilePath']; //input dir of phploc xml report
+$phplocXmlToHtml->reportToDir = $cmd['outputPath']; //output of dir of HTML Report
+$phplocXmlToHtml->generate();

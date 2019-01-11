@@ -1,13 +1,27 @@
 {
   "name": "linslin/phploc-xmltohtmlreport",
   "description": "Create HTML Report for phploc.",
+  "homepage": "http://www.linslin.org",
   "type": "phploc-stand-alone-extension",
   "keywords": ["php","quality","HTML", "Report"],
   "license": "MIT",
   "authors": [
     {
       "name": "Nils Gajsek",
-      "email": "info@linslin.org"
+      "email": "info@linslin.org",
+      "role": "lead"
     }
-  ]
+  ],
+  "require": {
+    "ext-simplexml": "*",
+    "nategood/commando": "^0.3.0"
+  },
+  "support": {
+    "issues": "https://github.com/linslin/phploc-xmlToHtmlReport/issues"
+  },
+  "autoload": {
+    "classmap": [
+      "app/"
+    ]
+  }
 }

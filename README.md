@@ -1,5 +1,5 @@
 # PHPLOC-xmlToHtmlReport
-=======================
+
 
 ## Notice
 If errors in phploc Report Types "cli | txt | csv" occur or, if necessary, an HTML report is desired, this extension can be used. 
@@ -24,7 +24,7 @@ php composer require --prefer-dist linslin/phploc-xmltohtmlreport "*"
 
 ## Run via binary
 ```
-vendor/bin/phpLocXmlToHtml -importFilePath="reports/phpLoc.xml" -outputFilePath="reports/phpLoc.html"
+vendor/bin/phpLocXmlToHtml --importFilePath ./test/phploc.xml --outputPath ./test"
 ```
 
 ## Run with Phing

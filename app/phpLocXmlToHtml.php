@@ -7,18 +7,22 @@
  * @author    Nils Gajsek <nils.gajsek@glanzkinder.com>
  * @copyright 2013-2014 Nils Gajsek
  * @license   http://opensource.org/licenses/gpl-license.php GNU Public License
- * @version   0.1
+ * @version   1.0
  * @link      https://github.com/linslin
  * 
  */
+
 require 'lib/functions.php';
 
-class phplocXmlToHtml
+
+/**
+ * Class phpLocXmlToHtml
+ */
+class phpLocXmlToHtml
 {
     
-    
-    
-    // ################## class vars ##################
+
+    // ############################################# class vars ########################################################
     
     /**
      * Input phploc based 
@@ -50,9 +54,8 @@ class phplocXmlToHtml
      */
     private $_htmlReport = '';
 
-    
-    
-    // ################## class methods ##################
+
+    // ################################################ class methods ##################################################
     
     /**
      * Public class constructor
@@ -81,12 +84,12 @@ class phplocXmlToHtml
                 foreach(xml2array_parse($this->_reports) as $itemId => $itemValue){
                     $itemsHtml .= '<tr><td class="no-border">';
                     $itemsHtml .= htmlentities($itemId);
-                    $itemsHtml .= file_exists($this->baseDir.'/ressources/img/icons/'.strtolower($itemId).'.png') ? ' <img src="img/icons/'.strtolower($itemId).'.png" alt="'.strtolower($itemId).'" height="35" />' : ''; 
+                    $itemsHtml .= file_exists($this->baseDir .'/ressources/img/icons/'.strtolower($itemId).'.png') ? ' <img src="img/icons/'.strtolower($itemId).'.png" alt="'.strtolower($itemId).'" height="35" />' : '';
                     $itemsHtml .= '</td><td>';
                     $itemsHtml .= htmlentities($itemValue);
                     $itemsHtml .= '</td></tr>'."\n";
                 }
-            }else{
+            } else {
                 $itemsHtml = '<tr><td colspan="2">Report is empty</td><tr>';
             }
             
@@ -107,7 +110,7 @@ class phplocXmlToHtml
         //does the report file exist?
         if (file_exists($this->xmlReportFilePath)) {
             $this->_reports = new SimpleXMLElement(file_get_contents($this->xmlReportFilePath)); //open xml report
-        }else{
+        } else {
             echo 'No Reports found for phplocXmlToHtml in '.$this->xmlReportFilePath."\n";
         }
     }
@@ -117,7 +120,7 @@ class phplocXmlToHtml
      * Put record
      */
     private function putReport(){
-        //create report and copy ressources
+        //create report and copy resources
         file_put_contents($this->reportToDir.'/index.html', $this->_htmlReport);
         recurse_copy($this->baseDir.'/ressources/img/', $this->reportToDir.'/img');
     }
