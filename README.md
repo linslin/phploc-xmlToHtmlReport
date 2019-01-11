@@ -9,18 +9,27 @@ PHPLOC-xmlToHtmlReport converts xml phploc reports into HTML reports.
 
 - Create HTML offline report for phploc by using xml phploc report
 
+## Installation
+
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+
+```bash
+php composer require --prefer-dist linslin/phploc-xmltohtmlreport "*"
+```
+
 ## Screenshots
 
 ![ScreenShot](https://raw.githubusercontent.com/linslin/phploc-xmlToHtmlReport/master/art/screen1.png)
 
-## Tested with
 
-- TeamCity CI 8.XX, Phing 2.6.1 & PHPUnit 1.3.2
+## Run via binary
+```
+vendor/bin/phpLocXmlToHtml -importFilePath="reports/phpLoc.xml" -outputFilePath="reports/phpLoc.html"
+```
 
-## Install & configuration with Phing
+## Run with Phing
 
-1. Checkout https://github.com/linslin/phploc-xmlToHtmlReport into build/lib/
-2. Modify build.xml and ad ad-hoc: (this is on way you can run this script) Note: run adhoc-task after phploc ;)
+1. Modify build.xml and ad ad-hoc: (this is on way you can run this script) Note: run adhoc-task after phploc ;)
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="MyProject" default="hello">
@@ -64,7 +73,12 @@ PHPLOC-xmlToHtmlReport converts xml phploc reports into HTML reports.
 </project> 
 ```
 
-3. A HTML-Report "index.html" will be created in build/reports/phploc/
+2. A HTML-Report "index.html" will be created in build/reports/phploc/
+
+
+## Tested with
+
+- TeamCity CI 8.XX, Phing 2.6.1 & PHPUnit 1.3.2, Atlassian Bamboo 5
 
 ## License
 PHPLOC-xmlToHtmlReport is released under GNU (GPL-3.0) license.
